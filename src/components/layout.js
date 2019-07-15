@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import {Spring} from 'react-spring/renderprops'
+import { Spring } from "react-spring/renderprops"
 
 import Archive from "./archive"
 import Header from "./header"
@@ -61,11 +61,11 @@ const Layout = ({ children, location }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Spring
-          from={{ height: location.pathname === '/' ? 100 : 200 }}
-          to={{ height: location.pathname === '/' ? 200 : 100 }}
+          from={{ height: location.pathname === "/" ? 100 : 200 }}
+          to={{ height: location.pathname === "/" ? 200 : 100 }}
         >
           {styles => (
-            <div style={{ overflow: 'hidden', ...styles }}>
+            <div style={{ overflow: "hidden", ...styles }}>
               <Img fluid={data.file.childImageSharp.fluid} />
             </div>
           )}

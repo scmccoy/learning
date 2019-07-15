@@ -1,13 +1,13 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const POST_ARCHIVE_QUERY = graphql`
   query BlogPostArchive {
-    allMarkdownRemark(limit: 5, sort: {
-    order: DESC,
-    fields: [frontmatter___date]
-  }) {
+    allMarkdownRemark(
+      limit: 5
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           frontmatter {
@@ -25,10 +25,10 @@ const ArchiveList = styled.ul`
   list-style: none;
   a {
     font-size: 0.8rem;
-        text-decoration: underline;
-        font-family: sans-serif;
+    text-decoration: underline;
+    font-family: sans-serif;
   }
-`;
+`
 
 const Archive = () => (
   <StaticQuery
@@ -40,7 +40,9 @@ const Archive = () => (
           <ArchiveList>
             {allMarkdownRemark.edges.map(edge => (
               <li key={edge.node.frontmatter.slug}>
-                <Link to={`/posts${edge.node.frontmatter.slug}`} >{edge.node.frontmatter.title}</Link>
+                <Link to={`/posts${edge.node.frontmatter.slug}`}>
+                  {edge.node.frontmatter.title}
+                </Link>
               </li>
             ))}
           </ArchiveList>

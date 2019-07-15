@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import gatsbyLogo from '../images/gatsby-icon.png';
+import gatsbyLogo from "../images/gatsby-icon.png"
 
 const HeaderWrapper = styled.div`
   background: #524763;
@@ -11,12 +11,12 @@ const HeaderWrapper = styled.div`
   img {
     margin-bottom: 0;
   }
-`;
+`
 const HeaderContainer = styled.div`
-          margin: 0 auto;
-        max-width: 960;
-        padding: 0.5rem;
-`;
+  margin: 0 auto;
+  max-width: 960;
+  padding: 0.5rem;
+`
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <img src={gatsbyLogo} style={{ width: '100px' }} alt="Gatsby Logo" />
+          <img src={gatsbyLogo} style={{ width: "100px" }} alt="Gatsby Logo" />
           {siteTitle}
         </Link>
       </h1>
