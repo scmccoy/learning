@@ -28,7 +28,7 @@ const Post = styled.article`
   border-radius: 4px;
   margin-bottom: 1rem;
   a {
-    color: #000;
+    color: #FAF3DD;
     text-decoration: none;
   }
   h2 {
